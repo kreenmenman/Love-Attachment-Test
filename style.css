@@ -1,0 +1,64 @@
+:root{--bg:#0b0f14;--card:#121821;--accent:#69e0ff;--txt:#eef3f7;--muted:#9bb0c3;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans JP",sans-serif}
+.hero{padding:72px 20px;text-align:center;background:linear-gradient(180deg,#111b27,#0b0f14)}
+.hero h1{font-size:32px;margin:0 0 8px}
+.sub{color:var(--muted);margin:0 0 16px}
+.cta{display:inline-block;background:var(--accent);color:#001018;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:700;border:none;cursor:pointer}
+.container{max-width:920px;margin:32px auto;padding:0 16px}
+.card{background:var(--card);border:1px solid #223142;border-radius:12px;padding:16px;margin:12px 0}
+.note{color:var(--muted)}
+h2{margin-top:28px}
+fieldset{border:1px solid #223142;border-radius:12px;margin:12px 0;padding:8px}
+legend{padding:0 8px;color:var(--muted)}
+
+/* エラーメッセージ（未回答） */
+.form-error{color:#ff6b6b;margin:8px 0 0 2px;min-height:1.2em}
+fieldset.missing{border-color:#ff6b6b;box-shadow:0 0 0 2px #ff6b6b22}
+
+/* 回答UI（丸＋チェックマーク） */
+.opts{display:flex;gap:28px;align-items:center;justify-content:center;margin:22px 0}
+.opts label{background:transparent;border:none;padding:0;border-radius:0}
+.opts label span{display:none} /* 数字は非表示（丸だけ） */
+.opts input[type=radio]{
+  appearance:none;-webkit-appearance:none;
+  width:120px;height:120px;border-radius:50%;
+  border:10px solid var(--ring,#7aa7c7);
+  background:transparent;cursor:pointer;position:relative;
+  transition:transform .06s ease;
+}
+.opts input[type=radio]:hover{transform:scale(1.02)}
+/* 中央に ✓ を出す */
+.opts input[type=radio]:checked::before{
+  content:"✓";position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:64px;font-weight:800;color:var(--ring,#7aa7c7);line-height:1;
+}
+
+/* —— サイズ：端から「大・中・小」をより極端に（左右対称） —— */
+/* 左 1=大, 2=中, 3=小 / 右 4=小, 5=中, 6=大 */
+input.dot1{ width:128px;height:128px;border-width:11px; }
+input.dot2{ width:88px; height:88px; border-width:9px;  }
+input.dot3{ width:36px; height:36px; border-width:6px;  }
+input.dot4{ width:36px; height:36px; border-width:6px;  }
+input.dot5{ width:88px; height:88px; border-width:9px;  }
+input.dot6{ width:128px;height:128px;border-width:11px; }
+
+/* —— 色：左3=グリーン / 右3=パープル —— */
+input.dot1,input.dot2,input.dot3{ --ring:#2aa382; }   /* 緑 */
+input.dot4,input.dot5,input.dot6{ --ring:#7a5aa6; }   /* 紫 */
+
+/* 左右ラベル（任意） */
+.scale-hint{display:flex;justify-content:space-between;margin-top:-6px;color:#9bb0c3}
+.scale-hint .left{color:#2aa382}.scale-hint .right{color:#7a5aa6}
+
+/* 結果ページのタイプ画像 */
+.type-visual{margin:0 0 12px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.type-visual img{display:block;width:min(100%,480px);height:auto;border-radius:12px;border:1px solid #223142;background:#000}
+.type-visual figcaption{color:#9bb0c3;font-size:14px}
+
+/* フッタ等 */
+.back{color:#9bb0c3;text-decoration:none}
+.back:hover{text-decoration:underline}
+.foot{color:#6a7f93;text-align:center;margin:40px 0 28px}
+.dim{color:#9bb0c3}

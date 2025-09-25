@@ -1,0 +1,33 @@
+<!doctype html><html lang="ja"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>診断結果｜愛着スタイル16タイプ</title>
+<link rel="stylesheet" href="style.css"/>
+</head><body>
+<main class="container">
+  <a href="index.html" class="back">← やり直す</a>
+  <figure id="typeVisual" class="type-visual"></figure>
+  <h1 id="title">診断結果</h1>
+  <section id="summary" class="card"></section>
+
+  <h2>基本性格</h2>
+  <section id="basic" class="card"></section>
+
+  <h2>恋愛性質</h2>
+  <section id="love" class="card"></section>
+
+  <h2>理想の相手</h2>
+  <section id="ideal" class="card"></section>
+
+  <h2>相性アドバイス</h2>
+  <section id="match" class="card"></section>
+
+  <h2>ファセット・プロファイル</h2>
+  <canvas id="bars" width="900" height="460"></canvas>
+
+  <h2>共有リンク</h2>
+  <p><a id="share" href="#">この結果ページのURL</a></p>
+</main>
+<footer class="foot"><small>© 2025 Love Attachment 16</small></footer>
+<script src="bundle.js"></script>
+<script>renderResultFromQuery();</script>
+</body></html>
